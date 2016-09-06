@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div class="logo">
+      <h2>budget.biz.ua</h2>
+    </div>
+
+    <form #loginForm="ngForm" novalidate>
+      <ion-item>
+        <ion-label floating primary>Email</ion-label>
+        <ion-input [(ngModel)]="user.email" name="email" type="email" #useremail="ngModel" spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="useremail.valid || submitted == false" danger padding-left>
+        email is required
+      </p>
+
+      <ion-item>
+        <ion-label floating primary>Password</ion-label>
+        <ion-input [(ngModel)]="user.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>
+
+      <ion-row responsive-sm>
+        <ion-col>
+          <button (click)="onLogin(loginForm)" type="submit" primary block>Login</button>
+        </ion-col>
+        <ion-col>
+          <button (click)="onSignup()" light block>Signup</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+
+</ion-content>

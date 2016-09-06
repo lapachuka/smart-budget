@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>registration</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <div class="logo">
+      <h2>budget.biz.ua</h2>
+    </div>
+
+    <form #registrationForm="ngForm" novalidate>
+      <ion-item>
+        <ion-label floating primary>Username</ion-label>
+        <ion-input [(ngModel)]="registration.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="username.valid || submitted == false" danger padding-left>
+        Username is required
+      </p>
+
+      <ion-item>
+        <ion-label floating primary>Password</ion-label>
+        <ion-input [(ngModel)]="registration.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="password.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>
+      <ion-item>
+        <ion-label floating primary>Repeat Password</ion-label>
+        <ion-input [(ngModel)]="registration.rePassword" name="rePassword" type="password" #rePassword="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p [hidden]="rePassword.valid || submitted == false" danger padding-left>
+        Password is required
+      </p>
+
+      <ion-row responsive-sm>
+        <ion-col>
+          <button (click)="onregistration(registrationForm)" type="submit" primary block>Submit</button>
+        </ion-col>
+        <ion-col>
+          <button (click)="onCancel()" light block>Cancel</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+
+</ion-content>
