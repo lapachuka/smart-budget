@@ -3,6 +3,7 @@ import {ionicBootstrap, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {LoginPage} from './pages/auth/login/login';
+import {OptionsPage} from './pages/options/options';
 import {ListPage} from './pages/list/list';
 
 
@@ -25,7 +26,7 @@ class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'Login', component: LoginPage },
+      { title: 'Options', component: OptionsPage },
       { title: 'My First List', component: ListPage }
     ];
   }

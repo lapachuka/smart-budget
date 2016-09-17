@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../smart-budget/.idea/MyIonic2Project.iml" filepath="$PROJECT_DIR$/../smart-budget/.idea/MyIonic2Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../smart-budget/.idea/smart-budget.iml" filepath="$PROJECT_DIR$/../smart-budget/.idea/smart-budget.iml" />
     </modules>
   </component>
 </project>

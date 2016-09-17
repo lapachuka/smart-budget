@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Optiions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <a ion-item (click)="goTo('income')">
+      Incomes
+    </a>
+    <a ion-item (click)="goTo('expenses')">
+      Expenses
+    </a>
+    <a ion-item (click)="goTo('account')">
+      Accounts
+    </a>
+  </ion-list>
+
+</ion-content>

@@ -1,18 +1,22 @@
 <ion-header>
   <ion-navbar>
-    <button menuToggle *ngIf="!selectedItem">
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Item Details</ion-title>
+    <ion-title>Income options</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
- <div *ngIf="selectedItem" class="selection">
-    <b>{{selectedItem.title}}</b>
-    <ion-icon name="{{selectedItem.icon}}"></ion-icon>
-    <div>
-      You navigated here from <b>{{selectedItem.title}}</b>
-    </div>
-  </div>
+  <ion-list>
+
+    <ion-item>
+      <ion-input [(ngModel)]="newValue" type="text" value="" placeholder="new item"></ion-input>
+      <button primary item-right  (click)='addNew(newValue)'>Add</button>
+    </ion-item>
+
+    <ion-item *ngFor='let income of incomes'>
+      <ion-input type="text" value="{{income.name}}" name="{{income.name}}-{{income.id}}">
+      </ion-input>
+      <button secondary clear item-right >Save</button>
+      <button danger clear item-right (click)='deleteItem(income.id)'>Delete</button>
+    </ion-item>
+  </ion-list>
 </ion-content>

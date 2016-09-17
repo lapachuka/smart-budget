@@ -4,7 +4,6 @@ import {RegistrationPage} from '../registration/registration';
 import {Http} from '@angular/http';
 import {HomepagePage} from "../../homepage/homepage";
 import {AlertController} from 'ionic-angular';
-import {Cookie} from 'ng2-cookies/ng2-cookies';
 
 
 @Component({
